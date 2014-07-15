@@ -1,0 +1,9 @@
+---
+slug: :backlight
+depends:
+  mikutter: 3.0.3
+  plugin: []
+version: '1.0'
+author: toshi_a
+name: Backlight
+description: ノートPC等のディスプレイバックライトの明るさを変更するmikutterコマンドを追加します。また、ふぁぼられる度に少しづつ画面が明るくなります。
