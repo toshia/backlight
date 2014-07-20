@@ -6,7 +6,7 @@ Plugin.create :backlight do
   end
 
   command(:backlight_dark,
-          name: 'バックライトを暗くする',
+          name: 'ディスプレイバックライトを暗くする',
           condition: lambda{ |opt| true },
           visible: true,
           role: :window) do |opt|
@@ -14,10 +14,26 @@ Plugin.create :backlight do
   end
 
   command(:backlight_light,
-          name: 'バックライトを明るくする',
+          name: 'ディスプレイバックライトを明るくする',
           condition: lambda{ |opt| true },
           visible: true,
           role: :window) do |opt|
     bg_system "xbacklight -inc 5"
+  end
+
+  command(:keyboard_backlight_dark,
+          name: 'キーボードバックライトを暗くする',
+          condition: lambda{ |opt| true },
+          visible: true,
+          role: :window) do |opt|
+    bg_system "kbdlight down"
+  end
+
+  command(:keyboard_backlight_light,
+          name: 'キーボードバックライトを明るくする',
+          condition: lambda{ |opt| true },
+          visible: true,
+          role: :window) do |opt|
+    bg_system "kbdlight up"
   end
 end
